@@ -1,6 +1,6 @@
 # تراث FIPA-ACL وقانونات الكلام
 
-> قبل MCP، قبل A2A، كان هناك FIPA-ACL. في عام 2000، صادقت مؤسسة IEEE للوكلاء الفيزيائيين الذكاء على لغة اتصال وكيل مع عشرين أداء، لغتين محتوى، ومجموعة من بروتوكولات التفاعل  العقد الشبكة، الاشتراك / الإخطار، الطلب-عندما. لقد اختفى من الصناعة لأن تكاليف الإنتولوجيا العليا كانت ثقيلة جداً على شبكة الإنترنت، ولكن إحياء LLM لنظم متعددة الوكلاء يعد ببساطة نفس الأفكار دون التعريف الرسمي: تعاقد JSON تعوض عن الأداء، اللغة الطبيعية تعوض عن الإنتولوجيا. هذا الدروس يقرأ FIPA-ACL بجدية حتى تتمكن من رؤية ما هي قرارات بروتوكول 2026 إعادة الاختراع، والتي هي الابتكار،
+> قبل MCP، قبل A2A، كان هناك FIPA-ACL. في عام 2000، صادقت مؤسسة العاملين الفيزيائيين الذكاء (FIPA، التي أصبحت لجنة معايير مجتمع الكمبيوتر IEEE في عام 2005) على لغة اتصال العامل مع عشرين لغة تنفيذية، ولغتين محتوى، ومجموعة من بروتوكولات التفاعل  العقد الشبكة، الاشتراك / الإخطار، الطلب-عندما. لقد اختفى من الصناعة لأن تكاليف الإنتولوجيا العليا كانت ثقيلة جداً على شبكة الإنترنت، ولكن إحياء LLM لنظم متعددة الوكلاء يعد ببساطة نفس الأفكار دون التعريف الرسمي: تعاقد JSON تعوض عن الأداء، اللغة الطبيعية تعوض عن الإنتولوجيا. هذا الدروس يقرأ FIPA-ACL بجدية حتى تتمكن من رؤية ما هي قرارات بروتوكول 2026 إعادة الاختراع، والتي هي الابتكار،
 
 **Type:** Learn
 **Languages:** Python (stdlib)
@@ -107,7 +107,7 @@
 - تحميلات مفيدة من JSON متوافقة مع كل أداة حديثة.
 - محتوى اللغة الطبيعية الذي يمكن أن تفسره الـ LLM دون أن يكون هناك علم منقوش يدوياً.
 - النقل عبر الإنترنت (HTTP، SSE، WebSocket).
-- اكتشاف القدرة من خلال وثائق تصفية ذاتية (MCP `listTools`بطاقة العميل (أ2أ)
+- اكتشاف القدرة عبر MCP مباشرة `server/discover`و بطاقات العميل A2A.
 
 أضعف تعبيرات النية لسهولة تنفيذها، هذه هي التجارة الدقيقة.
 
@@ -193,7 +193,7 @@ python3 code/main.py
 | Term | What people say | What it actually means |
 |------|----------------|------------------------|
 | Speech act | "An utterance that does something" | Austin/Searle: utterances as actions. The theoretical parent of ACL. |
-| FIPA | "That old XML thing" | IEEE Foundation for Intelligent Physical Agents. Standardized ACL in 2000. |
+| FIPA | "That old XML thing" | Foundation for Intelligent Physical Agents. Standardized ACL in 2000; became an IEEE Computer Society standards committee in 2005. |
 | ACL | "Agent Communication Language" | FIPA's envelope format: performative + content + metadata. |
 | Performative | "The verb" | The intent class of a message: `inform`, `request`, `propose`, `cfp`, etc. |
 | KQML | "FIPA's predecessor" | Knowledge Query and Manipulation Language (1993). Simpler, narrower. |
@@ -207,5 +207,5 @@ python3 code/main.py
 - [Liu et al. — A Survey of Agent Interoperability Protocols: MCP, ACP, A2A, ANP](https://arxiv.org/html/2505.02279v1) المسح القنوني لعام 2025 الذي يربط المواصفات الحديثة بالتراث في إفبا
 - [FIPA ACL Message Structure Specification (fipa00037)](http://www.fipa.org/specs/fipa00037/) صيغة غلاف عام 2000 المصدقة
 - [FIPA Communicative Act Library Specification (fipa00037)](http://www.fipa.org/specs/fipa00037/) الكتالوج الكامل للأداء
-- [MCP specification 2025-11-25](https://modelcontextprotocol.io/specification/2025-11-25) معادلة استخدام الأدوات الحديثة`request`-أجل`query-ref`
+- [MCP specification 2026-07-28](https://modelcontextprotocol.io/specification/2026-07-28) مستوى استخدام الأدوات الحالي دون ولاية`request`-أجل`query-ref`
 - [A2A specification](https://a2a-protocol.org/latest/specification/) المكافئ الحديث للوكيل-متساوية للعميل-العميل-العميل-العميل-العميل-العميل-العميل-العميل-العميل-العميل-العميل-العميل-العميل-العميل-العميل-العميل-العميل-العميل-العميل-العميل-العميل-العميل-العميل-العميل-العميل-العميل-العميل-العميل-العميل
