@@ -11,7 +11,7 @@
 
 - 解释为什么只能生成文本的法学士不能单独对现实世界采取行动.
 - 绘制四步工具调用循环 (描述 → 决定 → 执行 → 观察) 并命名每个步骤的所有者.
-- 写一个工具描述为三个部分:名称,JSON Schema输入和确定性执行函数.
+- 写一个工具定义为四个部分:名称,描述,JSON Schema输入和确定性执行函数.
 - 区分纯净的工具和副作用,并说明为什么分断对安全性有重要意义.
 
 ## 问题
@@ -28,7 +28,7 @@
 
 ### 步骤一:描述
 
-机器主将每个工具声明为三个字段.
+主机将每个工具都用三个字段声明给模型.第四部分,执行器,保持在主机侧,从来没有达到模型.
 
 - **Name.**机器可读的稳定识别器.`get_weather`没有"天气问题".
 - **Description.**简单一段自然语言简单. "当用户询问特定城市的当前状况时,请使用.不要用于历史数据".
@@ -112,7 +112,7 @@ tp-tool-loop
 
 什么要看:
 
-- 工具登记库每工具包含三个字段:名称,描述,方案和执行器引用.
+- 工具登记库每工具有四个字段:名称,描述,方案和执行器引用.只有前三个字段进入模型.
 - 验证器是简单的JSON方案子集 (类型,要求,enum,min/max) 仅用 stdlib 写的.
 - 生产代理需要这种电路切断器.
 
@@ -152,5 +152,5 @@ tp-tool-loop
 - [OpenAI — Function calling guide](https://platform.openai.com/docs/guides/function-calling) OpenAI 式工具声明和呼叫形状的常规参考
 - [Anthropic — Tool use overview](https://docs.anthropic.com/en/docs/agents-and-tools/tool-use/overview)克劳德的`tool_use`现在,`tool_result`区块格式
 - [Google — Gemini function calling](https://ai.google.dev/gemini-api/docs/function-calling) `functionDeclarations`在双子座中,并行调用语义
-- [Model Context Protocol — Specification 2025-11-25](https://modelcontextprotocol.io/specification/2025-11-25)工具界面的供应商-无知性通用化
+- [Model Context Protocol — Specification 2026-07-28](https://modelcontextprotocol.io/specification/2026-07-28)工具界面的当前无状态,提供商-无知的通用化
 - [JSON Schema — 2020-12 release notes](https://json-schema.org/draft/2020-12/release-notes)每个现代工具API都会使用的方案方言
