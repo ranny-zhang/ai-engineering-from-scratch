@@ -1,6 +1,6 @@
 # El patrimonio de las leyes FIPA-ACL y de discursos
 
-> Antes de MCP, antes de A2A, había FIPA-ACL. En el año 2000 la Fundación IEEE para Agentes Físicos Inteligentes ratificó un lenguaje de comunicación de agentes con veinte performativos, dos lenguajes de contenido y un conjunto de protocolos de interacción  contrato net, suscripción/notificación, solicitud-cuando. Se desvaneció de la industria porque la carga general de ontología era demasiado pesada para la web, pero el revival de LLM de sistemas multiagentes está reimplementando silenciosamente las mismas ideas sin la semántica formal: los contratos JSON representan los performativos, el lenguaje natural representa las ontologías. Esta lección lee en serio la FIPA-ACL para que pueda ver qué decisiones del protocolo 2026 son reinvenciones, qué son novedades, y dónde la ola actual va a redescubrir los problemas que ya resolvieron los años 2000.
+> Antes de MCP, antes de A2A, había FIPA-ACL. En el año 2000 la Fundación para Agentes Físicos Inteligentes (FIPA, que se convirtió en un comité de normas de la Sociedad de Computación IEEE en 2005) ratificó un lenguaje de comunicación de agentes con veinte performativos, dos lenguajes de contenido y un conjunto de protocolos de interacción  contrato net, suscripción/notificación, solicitud-cuando. Se desvaneció de la industria porque la carga general de ontología era demasiado pesada para la web, pero el revival de LLM de sistemas multiagentes está reimplementando silenciosamente las mismas ideas sin la semántica formal: los contratos JSON representan los performativos, el lenguaje natural representa las ontologías. Esta lección lee en serio la FIPA-ACL para que pueda ver qué decisiones del protocolo 2026 son reinvenciones, qué son novedades, y dónde la ola actual va a redescubrir los problemas que ya resolvieron los años 2000.
 
 **Type:** Learn
 **Languages:** Python (stdlib)
@@ -107,7 +107,7 @@ La encuesta de 2025 de Liu et al. ("Una encuesta de protocolos de interoperabili
 - Cargas útiles nativas de JSON compatibles con todas las herramientas modernas.
 - Contenido en lenguaje natural que los LLM puedan interpretar sin una ontología codificada a mano.
 - Transporte de la pila web (HTTP, SSE, WebSocket).
-- Descubrimiento de la capacidad mediante documentos auto-descriptivos (MCP `listTools`, Tarjeta de agente A2A).
+- Descubrimiento de la capacidad a través de MCP en vivo `server/discover`y las tarjetas de agente A2A.
 
 Se trata de una semántica de intención más flexible para una implementación más fácil.
 
@@ -193,7 +193,7 @@ Documenta estas cinco preguntas para cualquier nuevo protocolo antes de enviarlo
 | Term | What people say | What it actually means |
 |------|----------------|------------------------|
 | Speech act | "An utterance that does something" | Austin/Searle: utterances as actions. The theoretical parent of ACL. |
-| FIPA | "That old XML thing" | IEEE Foundation for Intelligent Physical Agents. Standardized ACL in 2000. |
+| FIPA | "That old XML thing" | Foundation for Intelligent Physical Agents. Standardized ACL in 2000; became an IEEE Computer Society standards committee in 2005. |
 | ACL | "Agent Communication Language" | FIPA's envelope format: performative + content + metadata. |
 | Performative | "The verb" | The intent class of a message: `inform`, `request`, `propose`, `cfp`, etc. |
 | KQML | "FIPA's predecessor" | Knowledge Query and Manipulation Language (1993). Simpler, narrower. |
@@ -207,5 +207,5 @@ Documenta estas cinco preguntas para cualquier nuevo protocolo antes de enviarlo
 - [Liu et al. — A Survey of Agent Interoperability Protocols: MCP, ACP, A2A, ANP](https://arxiv.org/html/2505.02279v1) la encuesta canónica de 2025 que conecta las especificaciones modernas con el patrimonio de la FIPA
 - [FIPA ACL Message Structure Specification (fipa00037)](http://www.fipa.org/specs/fipa00037/) el formato del envase 2000 ratificado
 - [FIPA Communicative Act Library Specification (fipa00037)](http://www.fipa.org/specs/fipa00037/) el catálogo completo de la interpretación
-- [MCP specification 2025-11-25](https://modelcontextprotocol.io/specification/2025-11-25) el equivalente moderno de uso de herramientas de `request`- ¿ Qué ?`query-ref`
+- [MCP specification 2026-07-28](https://modelcontextprotocol.io/specification/2026-07-28) el equivalente actual de uso de herramientas sin estado de `request`- ¿ Qué ?`query-ref`
 - [A2A specification](https://a2a-protocol.org/latest/specification/) el equivalente moderno de agente-para-par de contrato-net y suscriptor-notificar
